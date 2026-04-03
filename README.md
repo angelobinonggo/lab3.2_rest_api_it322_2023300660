@@ -6,7 +6,7 @@ A fully-secured Student Management REST API built with **Django REST Framework**
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Install dependencies
@@ -43,7 +43,7 @@ python manage.py runserver
 
 ---
 
-## 🔐 Part A: JWT Authentication
+## Part A: JWT Authentication
 
 ### Step 1 — Obtain a token
 
@@ -85,7 +85,7 @@ Content-Type: application/json
 
 ---
 
-## 📚 Part B: API Endpoints
+## Part B: API Endpoints
 
 All endpoints (except `/health/`) require `Authorization: Bearer <token>`.
 
@@ -149,7 +149,7 @@ All endpoints (except `/health/`) require `Authorization: Bearer <token>`.
 
 ---
 
-## 📄 Part C: API Documentation (Swagger)
+## Part C: API Documentation (Swagger)
 
 Visit: **http://localhost:8000/swagger/**
 
@@ -161,7 +161,7 @@ To test authenticated endpoints in Swagger:
 
 ---
 
-## 🧪 Part D: Testing and Debugging
+## Part D: Testing and Debugging
 
 ### Types of Testing Applied
 
@@ -192,7 +192,7 @@ Log output is written to both the console and `api.log` in the project root.
 
 ---
 
-## 📋 HTTP Status Codes Reference
+## HTTP Status Codes Reference
 
 | Code | Meaning | When |
 |------|---------|------|
@@ -207,7 +207,7 @@ Log output is written to both the console and `api.log` in the project root.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: Django 4.2 + Django REST Framework 3.14
 - **Auth**: djangorestframework-simplejwt
@@ -217,6 +217,6 @@ Log output is written to both the console and `api.log` in the project root.
 
 ---
 
-## 💭 Reflection
+## Reflection
 
 This lab gave me a deeper understanding of how REST APIs are secured, documented, and tested in a real-world setting. Implementing JWT (JSON Web Token) authentication showed me how stateless token-based security works — instead of storing session data on the server, the client carries a signed token with every request, which the server validates independently, making the API more scalable and aligned with REST's stateless principle. Generating API documentation using Swagger (drf-yasg) was particularly valuable, as I learned how self-documenting APIs reduce friction for developers trying to integrate with the system — the interactive Swagger UI allowed me to test endpoints directly without needing a separate tool. During security testing, observing the `401 Unauthorized` response when accessing a protected endpoint without a token confirmed that the authentication layer was working correctly, and reinforced why proper access control is non-negotiable in any production API. Setting up structured logging in the ViewSet also highlighted how crucial visibility is during debugging — by capturing who made each request and what resource was accessed, issues can be traced quickly without guesswork. Overall, this lab demonstrated that building a REST API is not just about making endpoints work, but about making them secure, understandable, and maintainable for both developers and end users.
