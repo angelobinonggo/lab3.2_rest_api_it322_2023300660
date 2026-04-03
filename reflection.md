@@ -1,0 +1,7 @@
+# Lab 3.2 — Short Reflection
+
+**IT322 | Student ID: 2023300660**
+
+---
+
+This lab gave me a deeper understanding of how REST APIs are secured, documented, and tested in a real-world setting. Implementing JWT (JSON Web Token) authentication showed me how stateless token-based security works — instead of storing session data on the server, the client carries a signed token with every request, which the server validates independently. This makes the API more scalable and aligned with REST's stateless principle. Generating API documentation using Swagger (drf-yasg) was particularly valuable, as I learned how self-documenting APIs reduce friction for developers trying to integrate with the system — the interactive Swagger UI allowed me to test endpoints directly without needing a separate tool like Postman. During security testing, observing the `401 Unauthorized` response when accessing a protected endpoint without a token confirmed that the authentication layer was working correctly, and reinforced why proper access control is non-negotiable in any production API. Setting up structured logging in the ViewSet also highlighted how crucial visibility is during debugging — by capturing who made each request and what resource was accessed, I could trace issues quickly without guessing. Overall, this lab demonstrated that building a REST API is not just about making endpoints work, but about making them secure, understandable, and maintainable for both developers and end users.
